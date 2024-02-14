@@ -9,25 +9,27 @@ using TestAPI.Models;
 
 namespace TestAPI.Controllers
 {
-    public class UsersController
+    public class Wantedcontoller
     {
-        public static List<Users> GetUsers(string login, string password)
+        public static List<Wanted> GetWanted()
         {
             try
             {
-                using(HttpClient client = new HttpClient())
+                using (HttpClient client = new HttpClient())
                 {
-                    string url=$"{Manager.RootUrl}/login/?login={login}&password={password}";
+                    string url = $"{Manager.RootUrl}/wanted";
                     Console.WriteLine(url);
                     HttpResponseMessage response = client.GetAsync(url).Result;
                     if (response.IsSuccessStatusCode)
                     {
                         var content = response.Content.ReadAsStringAsync();
-                        var answer = JsonConvert.DeserializeObject<Response<List<Users>>>(content.Result);
+                        var answer = JsonConvert.DeserializeObject<Response<List<Wanted>>>(content.Result);
+
                         return answer.data;
                     }
                     else return null;
-                    
+
+
                 }
             }
             catch { throw new Exception("Ошибка подключение к серверу"); }

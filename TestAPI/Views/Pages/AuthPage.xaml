@@ -24,6 +24,7 @@
                     MouseLeftButtonDown="RegTextBlockMouseLeftButtonDown"
                     HorizontalAlignment="Right"
                        KeyDown="RegTextBlockKeyDown"/>
+            <Button Content="Get wanted" x:Name="getwantedButton" Click="getwantedButtonClick"/>
         </StackPanel>
     </Grid>
 </Page>

@@ -70,5 +70,10 @@ namespace TestAPI.Views.Pages
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
+
+        private void getwantedButtonClick(object sender, RoutedEventArgs e)
+        {
+            List<Wanted> result = Wantedcontoller.GetWanted();
+        }
     }
 }

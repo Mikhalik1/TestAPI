@@ -59,9 +59,11 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Controllers\Wantedcontoller.cs" />
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\Response.cs" />
     <Compile Include="Models\Users.cs" />
+    <Compile Include="Models\Wanted.cs" />
     <Compile Include="Views\Pages\AuthPage.xaml.cs">
       <DependentUpon>AuthPage.xaml</DependentUpon>
     </Compile>
